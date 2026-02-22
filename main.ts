@@ -179,11 +179,11 @@ namespace stembit_Sensor {
 
     }
 
-    function IR_send_38k() {
+    function IR_send_38k(pin: DigitalPin) {
         for (let i: number = 0; i < 8; i++) {
-            pins.digitalWritePin(DigitalPin.P9, 1);
+            pins.digitalWritePin(pin, 1);
             control.waitMicros(13);
-            pins.digitalWritePin(DigitalPin.P9, 0);
+            pins.digitalWritePin(pin, 0);
             control.waitMicros(13);
         }
     }
@@ -194,8 +194,9 @@ namespace stembit_Sensor {
     export function IR_Sensor(pin: DigitalPin, value: enIR): boolean {
 
         pins.setPull(pin, PinPullMode.PullUp);
-        //IR_send_38k();
-        if (pins.digitalReadPin(pin) == value) {
+        //IR_send_38k(pin);
+
+if (pins.digitalReadPin(pin) == value) {
             return true;
         }
         else {
@@ -211,9 +212,9 @@ namespace stembit_Sensor {
     export function IR_Send(pin: DigitalPin): void {
 
 
-        IR_send_38k();
+        IR_send_38k(pin);
 
-    }
+}
 
     //% blockId=stembit_ultrasonic block="Ultrasonic|Trig %Trig|Echo %Echo"
     //% color="#87CEEB"

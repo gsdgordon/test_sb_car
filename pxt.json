@@ -1,16 +1,16 @@
 {
-    "name": "stembit",
-    "version": "1.0.1",
-    "description": "This is makecode extension for Stem Bit by SB Components",
-    "dependencies": {
-        "core": "*",
-        "neopixel": "github:microsoft/pxt-neopixel"
-    },
-    "files": [
-        "main.ts"
-    ],
-    "testFiles": [
-        "test.ts"
-    ],
-    "public": false
+  "name": "stembit",
+  "version": "1.0.2",
+  "description": "This is makecode extension for Stem Bit by SB Components",
+  "dependencies": {
+    "core": "*",
+    "neopixel": "github:microsoft/pxt-neopixel"
+  },
+  "files": [
+    "main.ts"
+  ],
+  "testFiles": [
+    "test.ts"
+  ],
+  "public": false
 }
